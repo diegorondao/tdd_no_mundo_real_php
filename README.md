@@ -6,8 +6,6 @@
 * Projeto criado com intuito acadêmico.
 * Ele é apenas um material de estudo e não deve ser usado em produção.
 
-## Demo
-[Clique aqui para ver a demo](http://)
 
 ## Referência
 * [Casa do Código - Teste e Design no Mundo Real com PHP](https://www.casadocodigo.com.br/products/livro-tdd-php)
