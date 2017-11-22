@@ -1,8 +1,6 @@
 <?php 
 namespace CDC\Loja\Produto;
 
-require "./vendor/autoload.php";
-
 use PHPUnit\Framework\TestCase;
 use CDC\Loja\Carrinho\CarrinhoDeCompras,
 	CDC\Loja\Produto\Produto,
