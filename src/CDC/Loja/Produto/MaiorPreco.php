@@ -13,8 +13,8 @@ class MaiorPreco
 
 		$maiorValor = $carrinho->getProdutos()[0]->getValorUnitario();
 		foreach($carrinho->getProdutos() as $produto) {
-			if ( $maiorValor < $produto->getValorUnitario() ) {
-				$maiorValor = $produto->getValorUnitario();
+			if ( $maiorValor < $produto->getValorTotal() ) {
+				$maiorValor = $produto->getValorTotal();
 			}
 		}
 		return $maiorValor;
