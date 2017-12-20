@@ -1,7 +1,6 @@
 <?php 
 namespace CDC\Loja\RH;
 
-require "./vendor/autoload.php";
 use PHPUnit\Framework\TestCase;
 use CDC\Loja\RH\CalculadoraDeSalario,
 	CDC\Loja\RH\Funcionario,
