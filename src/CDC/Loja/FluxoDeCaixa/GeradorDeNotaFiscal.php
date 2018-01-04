@@ -9,13 +9,11 @@ use DateTime;
 
 class GeradorDeNotaFiscal
 {
-	private $dao;
-	private $sap;
+	private $acoes;
 
-	public function __construct(NFDao $dao, SAP $sap)
+	public function __construct($acoes = null)
 	{
-		$this->dao = $dao;
-		$this->sap = $sap;
+		$this->acoes = $acoes;
 	}
 
 	public function gera(Pedido $pedido)
@@ -26,10 +24,11 @@ class GeradorDeNotaFiscal
 			new DateTime()
 		);
 
-		if( $this->dao->persiste($nf) && $this->sap->envia($nf) ){
-			return $nf;
+		foreach ($this->acoes as $acao) {
+			$acao->executa($nf);	
 		}
-		return null;
+		
+		return $nf;
 	}
 }
 ?>
