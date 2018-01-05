@@ -71,7 +71,7 @@ class ProdutoDaoTest extends TestCase
 		$this->assertEquals(150.0, $produtosAtivos[0]["valor_unitario"]);
 	}
 
-	// Removemos o banco
+	// Removemos o banco 
 	protected function tearDown()
 	{
 		parent::tearDown();
