@@ -22,7 +22,7 @@ class ProdutoDao
 		
 		$stmt->bindParam(1, $produto->getDescricao());
 		$stmt->bindParam(2, $produto->getValorUnitario());
-		// $stmt->bindParam(3, $produto->getStatus());
+		$stmt->bindParam(3, $produto->getStatus());
 		
 		$stmt->execute();
 
