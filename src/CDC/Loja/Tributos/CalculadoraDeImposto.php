@@ -1,13 +1,13 @@
 <?php
-namespace Loja\Tributos;
+namespace CDC\Loja\Tributos;
 
-use Loja\FluxoDeCaixa\Pedido;
-use Loja\Tributos\Tabela;
+use CDC\Loja\FluxoDeCaixa\Pedido,
+	CDC\Loja\Tributos\TabelaInterface;
 
 class CalculadoraDeImposto
 {
 	protected $tabela;
-	public function __construct(Tabela $tabela)
+	public function __construct(TabelaInterface $tabela)
 	{
 		$this->tabela = $tabela;
 	}

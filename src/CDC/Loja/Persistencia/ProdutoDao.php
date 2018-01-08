@@ -1,8 +1,8 @@
 <?php
-namespace Loja\Persistencia;
+namespace CDC\Loja\Persistencia;
 
 use PDO;
-use Loja\Produto\Produto;
+use CDC\Loja\Produto\Produto;
 
 class ProdutoDao
 {
@@ -22,7 +22,7 @@ class ProdutoDao
 		
 		$stmt->bindParam(1, $produto->getDescricao());
 		$stmt->bindParam(2, $produto->getValorUnitario());
-		$stmt->bindParam(3, $produto->getStatus());
+		// $stmt->bindParam(3, $produto->getStatus());
 		
 		$stmt->execute();
 
@@ -39,8 +39,9 @@ class ProdutoDao
 
 	public function ativos()
 	{
-		$sqlString = "SELECT * FROM `produto` WHERE status=1";
+		$sqlString = "SELECT * FROM `produto`";
 		$consulta = $this->conexao->query($sqlString);
 
 		return $consulta->fetchAll(PDO::FETCH_ASSOC);
 	}
+}

@@ -5,4 +5,4 @@ interface TabelaInterface
 {
 	public function paraValor( $valor );
 }
-?>
+
